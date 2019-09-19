@@ -1,0 +1,3 @@
+package com.payments.api.entity
+
+data class Person(val id: Int, val name: String, val age: Int)
