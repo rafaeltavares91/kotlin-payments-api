@@ -15,7 +15,8 @@ class PersonController {
     private fun getPersons(): List<Person> {
         return mutableListOf(
                 Person(1, "Rafa", 28),
-                Person(2, "Murilo", 24))
+                Person(2, "Murilo", 24),
+                Person(3, "Vanessa", 23))
     }
 
 }
