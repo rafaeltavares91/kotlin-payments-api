@@ -5,12 +5,14 @@ services:
     build: ./
     ports:
       - "8080"
-    environment:
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://db:5432/kotlin-hello"
-      SPRING_DATASOURCE_USERNAME: "hello"
-      SPRING_DATASOURCE_PASSWORD: "hello123"
+    depends_on:
+      - mypostgres
 
-  db:
-    image: postgres:10-alpine
-    volumes:
-      - "./volumes/db/pg_data:/var/lib/postgresql/data" # host-relative-path:path-within-container
+  mypostgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=paymentsapi
