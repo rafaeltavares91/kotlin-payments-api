@@ -1,3 +1,9 @@
 package com.payments.api.entity
 
-data class Person(val id: Int, val name: String, val age: Int)
+import javax.persistence.*
+
+@Entity
+data class Person(
+        @Id @GeneratedValue var id: Long? = null,
+        var name: String,
+        var age: Int)
