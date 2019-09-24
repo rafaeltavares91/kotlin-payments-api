@@ -4,6 +4,13 @@ import javax.persistence.*
 
 @Entity
 data class Person(
-        @Id @GeneratedValue var id: Long? = null,
-        var name: String,
-        var age: Int)
+
+    @Id
+    @GeneratedValue
+    var id: Long? = null,
+
+    var name: String,
+
+    var age: Int
+
+)
