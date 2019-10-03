@@ -1,7 +1,6 @@
 package com.payments.api.entity
 
 import javax.validation.Valid
-import javax.print.DocFlavor.STRING
 import java.math.BigDecimal
 import javax.persistence.*
 import javax.validation.constraints.Min
@@ -16,24 +15,24 @@ data class Payment(
 
     @NotNull
     @Min(value = 1)
-    var amount: BigDecimal? = null,
+    var amount: BigDecimal,
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    var type: PaymentType? = null,
+    var type: PaymentType,
 
     @Enumerated(EnumType.STRING)
-    var status: PaymentStatus? = null,
+    var status: PaymentStatus,
 
     @Valid
     @ManyToOne
     @JoinColumn(name = "client_id", nullable = false)
-    var client: Client? = null,
+    var client: Client,
 
     @Valid
     @ManyToOne
     @JoinColumn(name = "buyer_id", nullable = false)
-    var buyer: Buyer? = null,
+    var buyer: Buyer,
 
     @Valid
     @ManyToOne
