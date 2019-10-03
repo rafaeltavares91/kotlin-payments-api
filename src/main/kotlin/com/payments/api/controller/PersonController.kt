@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 class PersonController(private val personRepository: PersonRepository) {
 
     @GetMapping
-    fun findAll(): Iterable<Person> = personRepository.findAll();
+    fun findAll(): Iterable<Person> = personRepository.findAll()
 
     private fun getPersons(): List<Person> {
         return mutableListOf(
