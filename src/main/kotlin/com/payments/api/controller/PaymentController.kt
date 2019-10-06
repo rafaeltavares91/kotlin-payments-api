@@ -16,7 +16,13 @@ class PaymentController(private val paymentService: PaymentService) {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     fun checkPaymentStatus(@PathVariable id: Long): PaymentDTO {
-        return paymentService.findById(id);
+        return paymentService.findById(id)
+    }
+
+    @GetMapping("/")
+    @ResponseStatus(HttpStatus.OK)
+    fun all(): Iterable<PaymentDTO> {
+        return paymentService.findAll()
     }
 
 }

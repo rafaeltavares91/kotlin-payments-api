@@ -11,5 +11,5 @@ data class CardDTO(var id: Long?, var holderName: String, var number: String, va
 
 data class ClientDTO(var id: Int?)
 
-data class PaymentDTO(var id: Int?, var amount: BigDecimal, var type: String, var status: String,
-                      var clientDTO: ClientDTO, var buyerDTO: BuyerDTO, var cardDTO: CardDTO, var boletoDTO: BoletoDTO)
+data class PaymentDTO(var id: Int?, var amount: BigDecimal, var type: String, var status: String?,
+                      var clientDTO: ClientDTO, var buyerDTO: BuyerDTO, var cardDTO: CardDTO?, var boletoDTO: BoletoDTO?)

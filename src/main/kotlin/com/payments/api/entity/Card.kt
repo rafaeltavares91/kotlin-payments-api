@@ -31,7 +31,7 @@ data class Card (
     var expirationDate: Date,
 
     @NotNull
-    @Size(min = 3, max = 3, message = "CVV card number must 3 digits long")
+    @Size(min = 3, max = 3, message = "CCV card number must 3 digits long")
     var ccv: String
 
 )

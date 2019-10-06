@@ -26,11 +26,13 @@ data class Payment(
 
     @Valid
     @ManyToOne
+    @NotNull
     @JoinColumn(name = "client_id", nullable = false)
     var client: Client,
 
     @Valid
     @ManyToOne
+    @NotNull
     @JoinColumn(name = "buyer_id", nullable = false)
     var buyer: Buyer,
 
