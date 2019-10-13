@@ -21,6 +21,7 @@ data class Payment(
     @Enumerated(EnumType.STRING)
     var type: PaymentType,
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     var status: PaymentStatus,
 

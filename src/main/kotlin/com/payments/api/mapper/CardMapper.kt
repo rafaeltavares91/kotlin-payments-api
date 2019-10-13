@@ -4,7 +4,6 @@ import com.payments.api.dto.CardDTO
 import com.payments.api.entity.Card
 
 fun Card.toDTO() = CardDTO(
-        id = id,
         holderName = holderName,
         number = number,
         expirationDate = expirationDate,
@@ -12,7 +11,6 @@ fun Card.toDTO() = CardDTO(
 )
 
 fun CardDTO.toCard() = Card(
-        id = id,
         holderName = holderName,
         number = number,
         expirationDate = expirationDate,
